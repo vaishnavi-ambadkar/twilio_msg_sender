@@ -18,7 +18,7 @@ function App() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("http://localhost:5000/send-message", formData);
+      const res = await axios.post("https://twilio-msg-sender-api.vercel.app/send-message", formData);
       setResponse(res.data.message);
     } catch (error) {
       setResponse("Error sending message");
