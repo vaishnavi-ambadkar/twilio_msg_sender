@@ -15,7 +15,7 @@ const client = twilio(accountSid, authToken);
 // Middleware
 app.use(cors(
   {
-    origin:[" "],
+    origin:["https://twilio-msg-sender-front.vercel.app"],
     methods:["POST","GET"],
     credentials:true
 
