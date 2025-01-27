@@ -17,7 +17,7 @@ app.use(cors());
 
 CORS Configuration
 const corsOptions = {
-  origin: "https://twilio-sms-sending-frontend.vercel.app", // Your frontend domain
+  origin: "https://twilio-msg-sender-frontend.vercel.app", // Your frontend domain
   methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
   allowedHeaders: "Content-Type,Authorization", // Allow specific headers
 };
