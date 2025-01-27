@@ -15,14 +15,14 @@ const client = twilio(accountSid, authToken);
 // Middleware
 app.use(cors());
 
-CORS Configuration
-const corsOptions = {
-  origin: "https://twilio-msg-sender-frontend.vercel.app", // Your frontend domain
-  methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
-  allowedHeaders: "Content-Type,Authorization", // Allow specific headers
-};
+// CORS Configuration
+// const corsOptions = {
+//   origin: "", // Your frontend domain
+//   methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
+//   allowedHeaders: "Content-Type,Authorization", // Allow specific headers
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(express.json());
 
 // Root endpoint
