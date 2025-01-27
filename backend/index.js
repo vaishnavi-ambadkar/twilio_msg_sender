@@ -13,22 +13,30 @@ const authToken = process.env.TWILIO_AUTH_TOKEN;
 const client = twilio(accountSid, authToken);
 
 // Middleware
-app.use(cors());
+app.use(cors(
+  {
+    origin:[" "],
+    methods:["POST","GET"],
+    credentials:true
 
-CORS Configuration
-const corsOptions = {
-  origin: "https://twilio-msg-sender-f.vercel.app", // Your frontend domain
-  methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
-  allowedHeaders: "Content-Type,Authorization", // Allow specific headers
-};
+  }
+));
 
-app.use(cors(corsOptions));
+// CORS Configuration
+// const corsOptions = {
+//   origin: "https://twilio-msg-sender-f.vercel.app", // Your frontend domain
+//   methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
+//   allowedHeaders: "Content-Type,Authorization", // Allow specific headers
+// };
+
+// app.use(cors(corsOptions));
 app.use(express.json());
 
 // Root endpoint
-app.get("/", (req, res) => {
-  res.send("Welcome to the Twilio Message Sending API!");
-});
+app.get("/",(req,res)=>{
+    res.json("Hello");
+})
+
 
 // Message sending endpoint
 app.post("/send-message", async (req, res) => {
