@@ -21,7 +21,7 @@ const corsOptions = {
   methods: "GET,POST,PUT,DELETE", // Allow specific HTTP methods
   allowedHeaders: "Content-Type,Authorization", // Allow specific headers
 };
-app.use(cors(corsOptions));
+
 app.use(cors(corsOptions));
 app.use(express.json());
 
